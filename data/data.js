@@ -7,7 +7,7 @@ const pool = new Pool({
   port: 5432,
 })
 
-Client.connect(process.env.DATABASE_URL);
+pool.connect(process.env.DATABASE_URL);
 
 const data = ((caulenh) =>{
     return new Promise((resolve,reject) => {
