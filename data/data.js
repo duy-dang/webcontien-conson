@@ -6,6 +6,9 @@ const pool = new Pool({
   password: '0967216299',
   port: 5432,
 })
+
+Client.connect(process.env.DATABASE_URL);
+
 const data = ((caulenh) =>{
     return new Promise((resolve,reject) => {
     pool.query(caulenh, (err, responsive) => {
