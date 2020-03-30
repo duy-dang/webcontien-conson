@@ -1,13 +1,11 @@
 const { Pool, Client } = require('pg')
 const pool = new Pool({
   user: 'postgres',
-  host: 'contien-conson.herokuapp.com',
+  host: process.env.DATABASE_URL,
   database: 'sanphambetong',
   password: '0967216299',
   port: 5432,
 })
-
-pool.connect(process.env.DATABASE_URL);
 
 const data = ((caulenh) =>{
     return new Promise((resolve,reject) => {
