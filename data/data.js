@@ -1,7 +1,7 @@
 const { Pool, Client } = require('pg')
 const pool = new Pool({
   user: 'postgres',
-  host: 'localhost',
+  host: 'contien-conson.herokuapp.com',
   database: 'sanphambetong',
   password: '0967216299',
   port: 5432,
