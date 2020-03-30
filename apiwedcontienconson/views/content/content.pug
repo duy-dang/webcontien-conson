@@ -1,0 +1,145 @@
+extends ../layout/header
+
+block content
+     
+    // con tiện bê tông
+    .btn.btn-primary.btn-block.text-center.my-3
+        h5#contienbetong Con ti&#x1EC7;n B&ecirc; t&ocirc;ng
+    #contien.contien.row
+        each contien in contiens
+            .col-lg-4.col-md-6.col-sm-6.col-6
+                .card
+                    img.card-img-top(src=contien.contien_img, alt='Card image')
+                    .card-body
+                        h4.card-title= contien.contien_ten
+                        p.card-text Giá : liên hệ
+                        .btn-group.d-flex.justify-content-center
+                            a.btn.btn-info(href="/chitiet/contien/" + contien.id) Chi ti&#x1EBF;t
+                            a.btn.btn-danger(href='/addsp/' + contien.contien_ten ) Đặt hàng
+    ul.pagination.mt-2.justify-content-end
+        li.page-item
+            a.page-link(href='/?pagecontien=1') Previous
+        li.page-item
+            a.page-link(href='/?pagecontien=1') 1
+        li.page-item
+            a.page-link(href='/?pagecontien=2') 2
+        li.page-item
+            a.page-link(href='/?pagecontien=3') 3
+        li.page-item
+            a.page-link(href='/?pagecontien=1') Next
+
+        //- .col-lg-4.col-md-6.col-sm-6.col-6
+        //-     .card
+        //-         img.card-img-top(src='./img/contien1.jpg', alt='Card image')
+        //-         .card-body
+        //-             h4.card-title Con ti&#x1EC7;n tr&ograve;n
+        //-             p.card-text Gi&aacute; : li&ecirc;n h&#x1EC7;
+        //-             .btn-group.d-flex.justify-content-center
+        //-                 .btn.btn-info Chi ti&#x1EBF;t
+        //-                 .btn.btn-danger &Dstrok;&#x1EB7;t h&agrave;ng
+        //- .col-lg-4.col-md-6.col-sm-6.col-6
+        //-     .card
+        //-         img.card-img-top(src='./img/contien1.jpg', alt='Card image')
+        //-         .card-body
+        //-             h4.card-title Con ti&#x1EC7;n tr&ograve;n
+        //-             p.card-text Gi&aacute; : li&ecirc;n h&#x1EC7;
+        //-             .btn-group.d-flex.justify-content-center
+        //-                 .btn.btn-info Chi ti&#x1EBF;t
+        //-                 .btn.btn-danger &Dstrok;&#x1EB7;t h&agrave;ng
+        //- .col-lg-4.col-md-6.col-sm-6.col-6
+        //-     .card
+        //-         img.card-img-top(src='./img/contien1.jpg', alt='Card image')
+        //-         .card-body
+        //-             h4.card-title Con ti&#x1EC7;n tr&ograve;n
+        //-             p.card-text Gi&aacute; : li&ecirc;n h&#x1EC7;
+        //-             .btn-group.d-flex.justify-content-center
+        //-                 .btn.btn-info Chi ti&#x1EBF;t
+        //-                 .btn.btn-danger &Dstrok;&#x1EB7;t h&agrave;ng
+        //- .col-lg-4.col-md-6.col-sm-6.col-6
+        //-     .card
+        //-         img.card-img-top(src='./img/contien1.jpg', alt='Card image')
+        //-         .card-body
+        //-             h4.card-title Con ti&#x1EC7;n tr&ograve;n
+        //-             p.card-text Gi&aacute; : li&ecirc;n h&#x1EC7;
+        //-             .btn-group.d-flex.justify-content-center
+        //-                 .btn.btn-info Chi ti&#x1EBF;t
+        //-                 .btn.btn-danger &Dstrok;&#x1EB7;t h&agrave;ng
+        //- .col-lg-4.col-md-6.col-sm-6.col-6
+        //-     .card
+        //-         img.card-img-top(src='./img/contien1.jpg', alt='Card image')
+        //-         .card-body
+        //-             h4.card-title Con ti&#x1EC7;n tr&ograve;n
+        //-             p.card-text Gi&aacute; : li&ecirc;n h&#x1EC7;
+        //-             .btn-group.d-flex.justify-content-center
+        //-                 .btn.btn-info Chi ti&#x1EBF;t
+        //-                 .btn.btn-danger &Dstrok;&#x1EB7;t h&agrave;ng
+    // con sơn bê tông
+    .btn.btn-warning.btn-block.text-center.my-3
+        h5#consonbetong(style='color:white') Con s&#x1A1;n B&ecirc; t&ocirc;ng
+    #conson.conson.row
+        each conson in consons
+            .col-lg-4.col-md-4.col-sm-6.col-6
+                .card
+                    img.card-img-top(src=conson.conson_img, alt='Card image')
+                    .card-body
+                        h4.card-title= conson.conson_ten
+                        p.card-text Giá : liên hệ
+                        .btn-group.d-flex.justify-content-center
+                            a.btn.btn-info(href="/chitiet/conson/"+conson.id) Chi tiết
+                            a.btn.btn-danger(href='/addsp/' + conson.conson_ten ) Đặt hàng
+    ul.pagination.mt-2.justify-content-end
+        li.page-item
+            a.page-link(href='/?pageconson=1') Previous
+        li.page-item
+            a.page-link(href='/?pageconson=1') 1
+        li.page-item
+            a.page-link(href='/?pageconson=2') 2
+        li.page-item
+            a.page-link(href='/?pageconson=3') 3
+        li.page-item
+            a.page-link(href='/?pageconson=1') Next
+        //- .col-lg-4.col-md-6.col-sm-6.col-6
+        //-     .card
+        //-         img.card-img-top(src='./img/conson1.jpg', alt='Card image')
+        //-         .card-body
+        //-             h4.card-title Con s&#x1A1;n vu&ocirc;ng
+        //-             p.card-text Gi&aacute; : li&ecirc;n h&#x1EC7;
+        //-             .btn-group.d-flex.justify-content-center
+        //-                 .btn.btn-info Chi ti&#x1EBF;t
+        //-                 .btn.btn-danger &Dstrok;&#x1EB7;t h&agrave;ng
+        //- .col-lg-4.col-md-6.col-sm-6.col-6
+        //-     .card
+        //-         img.card-img-top(src='./img/conson1.jpg', alt='Card image')
+        //-         .card-body
+        //-             h4.card-title Con s&#x1A1;n vu&ocirc;ng
+        //-             p.card-text Gi&aacute; : li&ecirc;n h&#x1EC7;
+        //-             .btn-group.d-flex.justify-content-center
+        //-                 .btn.btn-info Chi ti&#x1EBF;t
+        //-                 .btn.btn-danger &Dstrok;&#x1EB7;t h&agrave;ng
+        //- .col-lg-4.col-md-6.col-sm-6.col-6
+        //-     .card
+        //-         img.card-img-top(src='./img/conson1.jpg', alt='Card image')
+        //-         .card-body
+        //-             h4.card-title Con s&#x1A1;n vu&ocirc;ng
+        //-             p.card-text Gi&aacute; : li&ecirc;n h&#x1EC7;
+        //-             .btn-group.d-flex.justify-content-center
+        //-                 .btn.btn-info Chi ti&#x1EBF;t
+        //-                 .btn.btn-danger &Dstrok;&#x1EB7;t h&agrave;ng
+        //- .col-lg-4.col-md-6.col-sm-6.col-6
+        //-     .card
+        //-         img.card-img-top(src='./img/conson1.jpg', alt='Card image')
+        //-         .card-body
+        //-             h4.card-title Con s&#x1A1;n vu&ocirc;ng
+        //-             p.card-text Gi&aacute; : li&ecirc;n h&#x1EC7;
+        //-             .btn-group.d-flex.justify-content-center
+        //-                 .btn.btn-info Chi ti&#x1EBF;t
+        //-                 .btn.btn-danger &Dstrok;&#x1EB7;t h&agrave;ng
+        //- .col-lg-4.col-md-6.col-sm-6.col-6
+        //-     .card
+        //-         img.card-img-top(src='./img/conson1.jpg', alt='Card image')
+        //-         .card-body
+        //-             h4.card-title Con s&#x1A1;n vu&ocirc;ng
+        //-             p.card-text Gi&aacute; : li&ecirc;n h&#x1EC7;
+        //-             .btn-group.d-flex.justify-content-center
+        //-                 .btn.btn-info Chi ti&#x1EBF;t
+        //-                 .btn.btn-danger &Dstrok;&#x1EB7;t h&agrave;ng

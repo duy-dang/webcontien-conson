@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.btn
+{
+    cursor: pointer;
+}
+.header 
+{
+    background-image: url('../img/anhnen1.png') ;
+    background-size:  contain;
+}
+.menu
+{
+    margin-bottom: 5px;
+}
+.menu .navbar
+{
+     border-radius: 6px;
+     font-size: 17px;
+} 
+.main .content 
+{
+    background-color: aqua;
+}
+.main .content .lienhe
+{
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+.main .content .sanpham
+{
+    margin: 10px 0px;
+}
+.main .slider .lienhe img
+{
+    width: 30px;
+    height: 30px;
+}
+.main .slider .lienhe
+{
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;  
+}
+.footder .footder-center
+{
+    margin-top: 10px;
+    background-color: chartreuse;
+    color: white;
+    border-radius: 6px;
+}
+

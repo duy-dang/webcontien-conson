@@ -1,0 +1,126 @@
+html
+	head
+		title Con ti&#x1EC7;n - Con s&#x1A1;n
+		// Required meta tags
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+		// css
+		link(rel="stylesheet" href="/stylesheets/style.css")
+		// font-icon
+		link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.0/css/all.css', integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ', crossorigin='anonymous')
+		// Bootstrap CSS
+		link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+		// jqueryui
+		script(type='text/javascript', src='./jqueryui/jquery-ui.js')
+		// jquery
+		script(type='text/javascript', src='./jquerymy/jquery-3.4.1.min.js')
+		script(type='text/javascript', src='./jquerymy/jquerymy.js')
+	body
+		.header.jumbotron.text-center(style='margin-bottom: 2px;')
+			h2 Con s&#x1A1;n Con ti&#x1EC7;n
+			h2 B&ecirc; t&ocirc;ng , Ch&#x1EA5;t l&#x1B0;&#x1EE3;ng , Uy t&iacute;n
+			h4 Li&ecirc;n h&#x1EC7; : 0967216299
+		.menu.container
+			nav.navbar.navbar-expand-md.bg-warning.navbar-light
+				// Brand
+				a.navbar-brand(href='/') Trang ch&#x1EE7;
+				// Toggler/collapsibe Button
+				button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
+					span.navbar-toggler-icon
+				// Navbar links
+				
+				#collapsibleNavbar.menu-center.collapse.navbar-collapse
+					ul.navbar-nav
+						li.nav-item.dropdown
+							a#navbardrop.nav-link.dropdown-toggle(href='#', data-toggle='dropdown')
+								| S&#x1EA3;n ph&#x1EA9;m
+							.dropdown-menu
+								a.dropdown-item(href='#contienbetong') Con ti&#x1EC7;n tr&ograve;n
+								a.dropdown-item(href='#consonbetong') Con s&#x1A1;n vu&ocirc;ng
+								a.dropdown-item(href='#daucotbetong') &Dstrok;&#x1EA5;u c&#x1ED9;t
+						li.nav-item
+							a.nav-link(href='/gioithieu') Gi&#x1EDB;i thi&#x1EC7;u
+						li.nav-item
+							a.nav-link(href='/tintuc') Tin t&#x1EE9;c
+						li.nav-item
+							a.nav-link(href='/huongdan') H&#x1B0;&#x1EDB;ng d&#x1EAB;n
+						li.nav-item
+							a.nav-link(href='/lienhe') Li&ecirc;n h&#x1EC7;
+				a.fas.fa-shopping-cart.text-dark(href='/giohang') Giỏ hàng
+					span.badge.badge-light= countcart
+		.main.container.shadow
+			.row
+				.content.col-lg-9.col-md-9
+					block content
+				.slider.col-lg-3.col-md-3
+					.btn.btn-block.btn-info.my-3
+						h5 H&#x1ED7; tr&#x1EE3; tr&#x1EF1;c tuy&#x1EBF;n
+					img.card-img(src='/img/lienhe.jpg', alt='')
+					.lienhe
+						p
+							i.fas.fa-phone
+								|  Li&ecirc;n h&#x1EC7;: 0967216299
+						p
+							i.fas.fa-envelope-square
+								|  Email: dangd0054@gmail.com
+						ul.nav
+							li.nav-item
+								a(href='https://www.facebook.com/Con-s%C6%A1n-con-ti%E1%BB%87n-xi-m%C4%83ng-uy-t%C3%ADn-ch%E1%BA%A5t-l%C6%B0%E1%BB%A3ng-_lh-0967216299-101795318107791/?notif_id=1585289473814633&notif_t=page_invite_accept&ref=notif')
+									img(src='/img/iconfb.png')
+							li.nav-item
+								a(href='#')
+									img(src='/img/iconigram.jpg')
+							li.nav-item
+								a(href='#')
+									img(src='/img/iconzalo.jpg')
+					.btn.btn-block.btn-info.mt-3
+						h5 S&#x1EA3;n ph&#x1EA9;m b&aacute;n ch&#x1EA1;y
+					.sanphambanchay
+						.card
+							.row
+								.col-lg-12.col-md-12.col-sm-4.col-6
+									.row
+										.col-lg-6
+											img(src='/img/contien1.jpg', alt='', style='width:140px; height: 105px;')
+										.col-lg-6
+											.card-body(style='padding: 0;')
+												h6.card-title Con ti&#x1EC7;n tr&ograve;n
+												p.card-text.text-danger Gi&aacute;: li&ecirc;n h&#x1EC7;
+												.btn.btn-info(style='height:35px') Chi ti&#x1EBF;t
+								.col-lg-12.col-md-12.col-sm-4.col-6
+									.row.mt-3
+										.col-lg-6
+											img(src='/img/conson1.jpg', alt='', style='width:140px; height: 105px;')
+										.col-lg-6
+											.card-body(style='padding: 0;')
+												h6.card-title Con s&#x1A1;n vu&ocirc;ng
+												p.card-text.text-danger Gi&aacute;: li&ecirc;n h&#x1EC7;
+												.btn.btn-info(style='height:35px') Chi ti&#x1EBF;t
+								.col-lg-12.col-md-12.col-sm-4.col-6
+									.row
+										.col-lg-6
+											img(src='/img/contien1.jpg', alt='', style='width:140px; height: 105px;')
+										.col-lg-6
+											.card-body(style='padding: 0;')
+												h6.card-title Con ti&#x1EC7;n tr&ograve;n
+												p.card-text.text-danger Gi&aacute;: li&ecirc;n h&#x1EC7;
+												.btn.btn-info(style='height:35px') Chi ti&#x1EBF;t
+					.btn.btn-block.btn-info.mt-3
+						h5 Like Facebook
+					.likefb.card
+						a(href="https://www.facebook.com/Con-s%C6%A1n-con-ti%E1%BB%87n-xi-m%C4%83ng-uy-t%C3%ADn-ch%E1%BA%A5t-l%C6%B0%E1%BB%A3ng-_lh-0967216299-101795318107791/?notif_id=1585289473814633&notif_t=page_invite_accept&ref=notif")
+							img.card-img-top(src='/img/likefb.jpg', alt='')
+						.card-body
+							h4.card-title Title
+							p.card-text H&atilde;y l&agrave; ng&#x1B0;&#x1EDD;i &dstrok;&#x1EA7;u ti&ecirc;n trong s&#x1ED1; b&#x1EA1;n b&egrave; c&#x1EE7;a b&#x1EA1;n th&iacute;ch n&#x1ED9;i dung n&agrave;y
+		.footder
+			.footder-center.container
+				h5 Con ti&#x1EC7;n-Con s&#x1A1;n
+				div X&#x1B0;&#x1EDF;ng s&#x1EA3;n xu&#x1EA5;t : Th&ocirc;n &dstrok;&#x1ED3;ng du-x&atilde; h&#x1EE3;p &dstrok;&#x1ED3;ng-huy&#x1EC7;n ch&#x1B0;&#x1A1;ng m&#x1EF9;-th&agrave;nh ph&#x1ED1; h&agrave; n&#x1ED9;i
+				div &Dstrok;i&#x1EC7;n tho&#x1EA1;i: 0967216299 
+				div Email: dangd0054@gmail.com
+
+		script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1', crossorigin='anonymous')
+		script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM', crossorigin='anonymous')
+

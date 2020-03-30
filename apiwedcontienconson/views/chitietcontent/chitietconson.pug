@@ -1,0 +1,38 @@
+extends ../layout/header
+
+block content
+    h1.text-center.mb-5 Chi tiết 
+    .card.mt-5(style='width:40%')
+        img.card-img-top(src= conson.conson_img  , alt='Card image')
+        .card-body
+            h4.card-title= conson.conson_ten 
+            p.card-text Gi&aacute; : li&ecirc;n h&#x1EC7;
+            a.btn.btn-danger(href='/addsp/' + conson.conson_ten ) Đặt hàng
+    h3 Thông tin
+    h1.text-center.mt-3.mb-5 Sản phẩm liên quan
+    .row
+        each consonlienquan in consons
+            .col
+                .card
+                    img.card-img-top(src= consonlienquan.conson_img, alt='Card image')
+                    .card-body
+                        h4.card-title= consonlienquan.conson_ten
+                        p.card-text Gi&aacute; : li&ecirc;n h&#x1EC7;
+                        a.btn.btn-info(href="/chitiet/conson/" + consonlienquan.id) Chi ti&#x1EBF;t
+                        a.btn.btn-danger(href='/addsp/' + conson.conson_ten ) Đặt hàng
+        //- .col
+        //-     .card
+        //-         img.card-img-top(src='./img/conson1.jpg', alt='Card image')
+        //-         .card-body
+        //-             h4.card-title Con s&#x1A1;n vu&ocirc;ng
+        //-             p.card-text Gi&aacute; : li&ecirc;n h&#x1EC7;
+        //-             a.btn.btn-info(href="/chitiet") Chi ti&#x1EBF;t
+        //-             .btn.btn-danger &Dstrok;&#x1EB7;t h&agrave;ng
+        //- .col
+        //-     .card
+        //-         img.card-img-top(src='./img/conson1.jpg', alt='Card image')
+        //-         .card-body
+        //-             h4.card-title Con s&#x1A1;n vu&ocirc;ng
+        //-             p.card-text Gi&aacute; : li&ecirc;n h&#x1EC7;
+        //-             a.btn.btn-info(href='/chitiet') Chi ti&#x1EBF;t
+        //-             .btn.btn-danger &Dstrok;&#x1EB7;t h&agrave;ng

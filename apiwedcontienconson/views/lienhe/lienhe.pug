@@ -1,0 +1,42 @@
+extends ../layout/header
+
+block content
+    .lienhe
+        h2.text-center LIÊN HỆ
+        if errs
+            each err in errs
+                .alert.alert-success= err
+        .d-flex.justify-content-center.mt-5
+            form(action="/lienhe" method='POST')
+                table
+                    tbody
+                        tr
+                            th
+                                label(for='ten') T&ecirc;n : 
+                            td
+                                input#ten(type='text', name="ten" , placeholder='nhập tên...', style='width:200px',value=value ? value.ten : '')
+                        tr
+                            th
+                                label(for='email') Email : 
+                            td
+                                input#email(type='text',name="email", placeholder='nhập email...', style='width:200px',value=value ? value.email : '')
+                        tr
+                            th
+                                label(for='sdt') S&dstrok;t : 
+                            td
+                                input#sdt(type='text',name="sdt", placeholder='nhập sđt...', style='width:200px',value=value ? value.sdt : '')
+                        tr
+                            th
+                                label(for='tieude') Ti&ecirc;u &dstrok;&#x1EC1; : 
+                            td
+                                input#tieude(type='text',name="tieude", placeholder='nhập tiêu đề...', style='width:200px',value=value ? value.tieude : '')
+                        tr
+                            th
+                                label(for='noidung') N&#x1ED9;i dung : 
+                            td
+                                input#noidung(type='text', name="noidung",placeholder='nhập nội dung...', style='width:200px',value=value ? value.noidung : '')
+                        tr
+                            th
+                                button sumbit
+                            
+                

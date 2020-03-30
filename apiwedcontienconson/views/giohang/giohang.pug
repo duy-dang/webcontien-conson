@@ -1,0 +1,25 @@
+extends ../layout/header
+
+block content
+    .giohang
+        each hang in hangs
+            .row.mt-2
+                .col-3
+                    img(src="/img/contien1.jpg", alt="")
+                .col-9
+                    table
+                        tbody
+                            tr
+                                th
+                                    label Tên:
+                                td
+                                    label= hang.ten   
+                            tr
+                                th
+                                    label Số lượng : 
+                                td
+                                    label= hang.soluong
+                            tr
+                                th
+                                    button    
+                                        a(href="/giohang/deletesp/" + hang.ten) Xóa  
